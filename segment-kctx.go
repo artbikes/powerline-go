@@ -3,21 +3,13 @@ package main
 import (
 	"fmt"
 	"os"
-	"strings"
 )
 
 func segmentKctx(p *powerline) {
 
 	cluster, _ := os.LookupEnv("KUBE_PS1_CONTEXT")
 	namespace, _ := os.LookupEnv("KUBE_PS1_NAMESPACE")
-	fmt.Println("hello world")
-	fmt.Println(cluster)
-	fmt.Println(namespace)
-	fmt.Println()
-	for _, e := range os.Environ() {
-		pair := strings.Split(e, "=")
-		fmt.Println(pair[0])
-	}
+
 	// Only draw the icon once
 	kubeIconHasBeenDrawnYet := false
 	if cluster != "" {
