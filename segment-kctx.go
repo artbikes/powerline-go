@@ -5,6 +5,8 @@ import (
 	"os"
 )
 
+// relies on enviornment variables from:
+// https://github.com/jonmosco/kube-ps1
 func segmentKctx(p *powerline) {
 
 	cluster, _ := os.LookupEnv("KUBE_PS1_CONTEXT")
